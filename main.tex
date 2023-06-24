@@ -1,0 +1,339 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% PREAMBLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\RequirePackage{snapshot}
+\documentclass[11pt]{article}
+\pagestyle{empty}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% IMPORTS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amssymb, fontspec, graphicx, hyperref, lmodern, indentfirst, setspace, titlesec, xifthen, xstring}
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper, margin=1in]{geometry}
+% soul, xcolor
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COMMANDS %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\coverletter}[1]{\setstretch{1.3} \vfill \large \hfill \today \\ \vfill \noindent#1 \vfill \newpage \setstretch{1}}
+\def\signature{\includegraphics[height=0.8in]{signature.png}\\ [-30pt]}
+\newcommand{\name}[1]{\begin{center}\Huge\textbf{#1}\end{center}}
+\newcommand{\tagline}[0]{\begin{center}\large\vspace{-0.8em}\taglinecontent\end{center}}
+\def\googlescholar{\href{https://scholar.google.com/citations?user=\scholar&hl=en}{Google Scholar}}
+\newcommand{\contact}[0]{
+    \vspace{-0.8em} \noindent \small
+    \href{mailto:\email}{\email}
+    \hfill
+    \href{tel:\phonenumber}{\phoneformat}
+    \hfill
+    \href{https://www.linkedin.com/in/\linkedin/}{LinkedIn}
+    \hfill
+    \googlescholar
+    \hfill
+    \href{https://www.google.com/maps/place/\location}{\location}
+}
+
+\newcommand{\education}[5]{\noindent \textbf{#1} \hfill #2 \\ #3 \hfill #4 \\ Research Advisor: #5}
+\newcommand{\employment}[5]{\noindent \textbf{#1} \hfill #2 \\ #3 \hfill #4 \par #5}
+\newfontface\semibold{FiraSans-Medium}
+\newcommand{\highlight}[1]{{\semibold#1}}
+\newcommand{\publication}[4]{\noindent\parbox{\textwidth}{{$\blacksquare~$}\ifthenelse{\isempty{#1}}{#2}{\href{https://doi.org/#1}{#2}} \StrSubstitute{#3}{\nametohighlight}{\highlight{\nametohighlight}}\small\emph{ #4}\par}}
+\newcommand{\skill}[1]{\noindent{$\blacksquare~$} #1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% STYLE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength{\parskip}{10pt}
+\setmainfont{Fira Sans}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue,
+    citecolor=blue,
+}
+\titleformat
+    {\section}
+    {\Large\bfseries}
+    {\thesection}
+    {}
+    {\vspace{-1em}}
+    [\vspace{-1.5em}\rule{\textwidth}{1pt}\vspace{-1em}]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% VARIABLES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\hiringmanager{Hiring Manager}
+\def\position{{xxxxxxxx}}
+\def\company{{xxxxxxxx}}
+\def\taglinecontent{Battery Scientist with 10+ years of experience in battery materials, electrochemistry, chemical characterization, and imaging techniques}
+\def\email{{xxxxxxx@xxxxx.xxx}}
+\def\phonenumber{{xxxxxxxxxx}}
+\def\phoneformat{{+x (xxx) xxx-xxxx}}
+\def\linkedin{bsparimalam}
+\def\scholar{e3C7Q28AAAAJ}
+\def\location{Vancouver, BC}
+\def\nametohighlight{Bharathy S. Parimalam}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% COVER LETTER %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\coverletter{Dear \hiringmanager,
+
+I am writing to apply for the open \position\ position at \company. With \highlight{over 10 years of research experience} in \highlight{lithium-ion batteries}, I have developed a strong expertise in \highlight{electrolytes}, and \highlight{silicon anodes}, along with \highlight{lithium metal systems, zinc-air batteries}, and \highlight{fuel cells}. I hold a \highlight{Ph.D. in Chemistry} from the University of Rhode Island and a \highlight{B.S. in Chemical and Electrochemical Engineering} from the Central Electrochemical Research Institute.
+
+I am well-versed in various characterization and imaging techniques such as electrochemical impedance spectroscopy \highlight{(EIS)}, cyclic voltammetry \highlight{(CV)}, gas chromatography mass spectrometry \highlight{(GCMS)}, nuclear magnetic resonance spectroscopy \highlight{(NMR)}, Fourier transform infrared spectroscopy \highlight{(FTIR)}, X-ray photoelectron spectroscopy \highlight{(XPS)}, scanning electron microscopy \highlight{(SEM)}, nano computed tomography \highlight{(Nano-CT)}, and micro computed tomography \highlight{(Micro-CT)}. My skills include \highlight{coating electrodes, cell construction, electrochemical testing, disassembly}, and \highlight{electrolyte extraction}.
+
+Having \highlight{published several impactful papers} in the domain of \highlight{lithium-ion anode SEI and electrolyte-SEI interactions}, I have gained recognition with \highlight{over 1000 citations}. Additionally, I am experienced in processing and analyzing large datasets using the \highlight{scientific python stack}, including \highlight{building numerical, machine learning}, and \highlight{deep learning models}.
+
+I believe that my extensive research experience, strong technical skills, and proven ability to collaborate effectively make me an excellent fit for the \position\ position at \company. Thank you for considering my application. I look forward to the opportunity to discuss how my skills and experience align with the needs of \company.
+
+\noindent Sincerely,\\
+\signature
+Bharathy Subramanian Parimalam}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% CURRICULUM VITAE %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\name
+    {Bharathy Subramanian Parimalam}
+
+\tagline
+
+\contact
+
+\section*{Professional Highlights}
+
+    \skill{Over 10 years of research experience in lithium-ion batteries, focused on electrolytes, and silicon anodes along with lithium metal systems, zinc-air batteries, and fuel cells. Experienced in coating electrodes, cell construction, electrochemical testing, disassembly, and electrolyte extraction.}
+    
+    \skill{Versed in a range of characterization and imaging techniques such as, electrochemical impedance spectroscopy (EIS), cyclic voltammetry (CV), gas chromatography mass spectrometry (GCMS), nuclear magnetic resonance spectroscopy (NMR), Fourier transform infrared spectroscopy (FTIR), X-ray photoelectron spectroscopy (XPS), scanning electron microscopy (SEM), nano computed tomography (Nano-CT), and micro computed tomography (Micro-CT).}
+    
+    \skill{Several impactful publications in the domain of lithium-ion anode SEI, electrolyte-SEI interactions, and lithium metal anodes with 1000+ citations.}
+    
+    \skill{Experienced in processing, quantifying, and visualizing large datasets using scientific python stack; building numerical, machine learning, and deep learning models; and segmenting complex and noisy images and extracting quantitative insights.}
+
+\section*{Education}
+
+\education
+    {University of Rhode Island}
+    {Kingston, RI, USA}
+    {Ph.D. in Chemistry}
+    {2012 - 2017}
+    {Prof. Brett L. Lucht}
+
+\education
+    {Central Electrochemical Research Institute}
+    {Karaikudi, TN, India}
+    {B.S. in Chemical and Electrochemical Engineering}
+    {2008 - 2012}
+    {Dr. T. Prem Kumar}
+
+\section*{Work Experience}
+
+\employment
+    {Research Scientist}
+    {Nov 2021 - Present}
+    {E-one Moli Energy (Canada) Ltd.}
+    {Maple Ridge, BC}
+    {\highlight{Modeled lithium-ion cells} to synthesize electrochemical data for method development and validation purposes. \highlight{Developed a python library} to extract aging parameters such as \highlight{silicon state of health, slippage}, and \highlight{resistance growth} from the \highlight{electrochemical performance} data of lithium-ion cells, using \highlight{pandas, numpy, scipy}, and \highlight{matplotlib}. Published a detailed \highlight{documentation} of the library using Sphinx.  Evaluated the \highlight{consumption rate} of crucial \highlight{electrolyte components} using gas chromatography-mass spectrometry \highlight{(GCMS)}. Maintained my domain knowledge current through reading relevant literature and attending scientific conferences. Provided recommendations to improve \highlight{electrolyte formulations} using the understanding obtained with experiments. Evaluated the significance of various factors in an experiment using \highlight{Design Expert (DOE)}. Participated in regular discussions among the colleagues with different domains and levels of expertise.}
+
+\employment
+    {Postdoctoral Fellow}
+    {Jan 2020 - Sep 2021}
+    {Simon Fraser University}
+    {Surrey, BC}
+    {Studied \highlight{pore size distribution}, porosity on \highlight{zinc-air battery}, and \highlight{water/ionomer distribution} in \highlight{fuel cell} cathodes. Designed and fabricated custom fixtures with humidity and temperature controls using \highlight{Solidworks(CAD)}. Acquired high-resolution 3D images using nano/micro X-ray computed tomography \highlight{(Nano-CT/Micro-CT)} and scanning electron microscopy \highlight{(FIB-SEM)}. Carried out image processing with \highlight{ImageJ}, and \highlight{python(scikit-image, numpy)}. Segmented the \highlight{3D images} for \highlight{quantitative analysis} using \highlight{machine learning} methods with \highlight{python (scikit-learn, tensorflow, pandas, numpy)}. Conducted \highlight{quantitative analyses} on images with python using the \highlight{porespy} library. Mentored graduate and undergraduate researchers with varying levels of expertise.}
+
+\employment
+    {Postdoctoral Researcher}
+    {Jun 2018 - Nov 2019}
+    {Carnegie Mellon University}
+    {Pittsburgh, PA}
+    {\highlight{Designed, fabricated}, and optimized \highlight{custom electrochemical coin cells} to suit specific goals. Studied the impact of current density, temperature, and electrolytes, on \highlight{lithium electroplating and dendrite growth} in \highlight{lithium-ion/ lithium metal battery anodes}, using a combination of electrochemical techniques, and nano X-ray computed tomography \highlight{(Nano-CT)}. Studied the reversal tolerant anodes and OER catalyst failure mechanisms in \highlight{fuel cells} using various \highlight{electrochemical techniques}. Designed, and fabricated custom holders to acquire high resolution images of \highlight{polymer electrolyte membrane (PEM)} in nano XCT under controlled humidity. Mentored graduate and undergraduate researchers with varying levels of expertise.}
+
+\employment
+    {Graduate Research/Teaching Assistant}
+    {Aug 2012 - Mar 2018}
+    {University of Rhode Island}
+    {Kingston, RI}
+    {Studied the \highlight{formation} and \highlight{decomposition reactions} of \highlight{anode SEI} components originating from electrolyte solvents, salts, and additives of \highlight{lithium-ion batteries}, using a combination of nuclear magnetic resonance spectroscopy \highlight{(NMR)}, Fourier transform infrared spectroscopy \highlight{(FTIR)}, gas chromatography-mass spectrometry \highlight{(GCMS)}, liquid chromatography-mass spectrometry \highlight{(LCMS)}, and X-ray photo electron spectroscopy \highlight{(XPS)}. \highlight{Fabricated electrodes, built and tested lithium-ion batteries} using various \highlight{electrochemical techniques}. Delivered brief lectures on theoretical concepts and calculations pertaining to the experiments. Taught and supervised the general chemistry experiments, \highlight{safe lab practices}, and waste management to undergraduate students. Evaluated the academic performance of the students through lab reports.}
+
+\section*{Publications \hfill \googlescholar}
+
+\publication
+    {}
+    {[In Preparation]}
+    {Bharathy S. Parimalam, Paul Choi, Dan Velez, Yubai Li, and Shawn Litster.}
+    {Lithium Electroplating Patterns Revealed with Nano XCT Imaging using Coin-cell Configuration.}
+
+\publication
+    {10.1016/j.jpowsour.2023.232820}
+    {J. Power Sources (2023) 564, 232820.}
+    {Fabusuyi Aroge, Bharathy S. Parimalam, John MacDonald, Francesco Orfino, Monica Dutta, and Erik Kjeang.}
+    {Analysing operando 2D X-ray transmission images for liquid water distribution in polymer electrolyte fuel cells.}
+
+\publication
+    {10.1021/acsenergylett.1c01657}
+    {ACS Energy Lett. (2021) 6, 11, 3788–3792.}
+    {Chamithri Jayawardana, Nuwanthi Rodrigo, Bharathy S. Parimalam, and Brett L Lucht.}
+    {Role of Electrolyte Oxidation and Difluorophosphoric Acid Generation in Crossover and Capacity Fade in Lithium Ion Batteries.}
+
+\publication
+    {10.1021/acsaem.0c02823}
+    {ACS Applied Energy Materials (2021) 4, 2, 1657-1665.}
+    {Paul Choi, Bharathy S. Parimalam, Laisuo Su, B Reeja-Jayan, Shawn Litster.}
+    {Operando Particle-Scale Characterization of Silicon Anode Degradation during Cycling by Ultrahigh-Resolution X-ray Microscopy and Computed Tomography.}
+
+\publication
+    {10.1016/j.mex.2021.101562}
+    {MethodsX (2021) 8, 101562.}
+    {Laisuo Su, Paul Choi, Bharathy S. Parimalam, Shawn Litster, B Reeja-Jayan.}
+    {Designing reliable electrochemical cells for operando lithium-ion battery study.}
+
+\publication
+    {10.1149/2.0161810jes}
+    {Journal of the Electrochemical Society(2018) 165 (10) A1991-A1996.}
+    {K. W. D. Kaveendi Chandrasiri, Cao Cuong Nguyen, Bharathy S. Parimalam, Sunhyung Jurng and Brett L. Lucht.}
+    {Citric Acid Based Pre-SEI for Improvement of Silicon Electrodes in Lithium Ion Batteries}
+
+\publication
+    {10.1149/2.0901802jes}
+    {Journal of the Electrochemical Society(2018) 165 (2) A251-A255.}
+    {Bharathy S. Parimalam, and Brett L. Lucht.}
+    {Reduction Reactions of Electrolyte Salts for Lithium-Ion Batteries: LiPF$_6$, LiBF$_4$, LiDFOB, LiBOB, and LiTFSI.}
+
+\publication
+    {10.1021/acs.jpcc.7b08433}
+    {Journal of Physical Chemistry C (2017) 121 (41), 22733-22738.}
+    {Bharathy S. Parimalam, Alex D. MacIntosh, Rahul Kadam, and Brett L. Lucht.}
+    {Decomposition Reactions of Anode Solid Electrolyte Interphase (SEI) Components with LiPF$_6$.}
+
+\publication
+    {10.1016/j.electacta.2017.08.065}
+    {Electrochimica Acta (2017) 250, 285-291.}
+    {KWD Kaveendi Chandrasiri, Cao Cuong Nguyen, Yuzi Zhang, Bharathy S. Parimalam, and Brett L. Lucht.}
+    {Systematic Investigation of Alkali Metal Ions as Additives for Graphite Anode in Propylene Carbonate Based Electrolytes.}
+
+\publication
+    {10.1016/j.jelechem.2017.06.002}
+    {Journal of Electroanalytical Chemistry (2017) 799, 181-186.}
+    {Yue Pan, Yuzi Zhang, Bharathy S. Parimalam, Cao Cuong Nguyen, Guiling Wang, and Brett L. Lucht.}
+    {Investigation of the Solid Electrolyte Interphase on Hard Carbon Electrode for Sodium-Ion Batteries.}
+
+\publication
+    {10.1021/acs.chemmater.7b00454}
+    {Chemistry of Materials (2017) 29 (7), 3237-3245.}
+    {Taeho Yoon, Mickdy S. Milien, Bharathy S. Parimalam, and Brett L. Lucht.}
+    {Thermal Decomposition of the Solid Electrolyte Interphase (SEI) on Silicon Electrodes for Lithium-Ion Batteries.}
+
+\publication
+    {10.1021/acs.chemmater.6b02282}
+    {Chemistry of Materials (2016) 28, (22) 8149-8159.}
+    {Alison L. Michan, Bharathy S. Parimalam, Michal Leskes, Rachel N. Kerber, Taeho Yoon, Clare P. Grey, and Brett L. Lucht.}
+    {Fluoroethylene Carbonate and Vinylene Carbonate Reduction: Understanding Lithium-Ion Battery Electrolyte Additives and Solid Electrolyte Interphase Formation.}
+
+\publication
+    {10.1149/2.0021409eel}
+    {ECS Electrochemistry Letters (2014) 3 (9), A91-A93.}
+    {Daniel M. Seo, Dinesh Chalasani, Bharathy S. Parimalam, Rahul Kadam, Mengyun Nie, and Brett L. Lucht.}
+    {Reduction Reactions of Carbonate Solvents for Lithium-Ion Batteries.}
+
+\section*{Presentations}
+
+\publication
+    {10.1149/MA2022-02391413mtgabs}
+    {242$^{\rm nd}$ ECS Meeting, Atlanta.}
+    {Sara Abouali, Bharathy S. Parimalam, Fabusuyi Aroge, Francesco Orfino, Monica Dutta, Erik Kjeang.}
+    {Visualization of Water Distribution in Fuel Cell Microporous and Catalyst Layers with 3D Nanoscale X-Ray Imaging (2022).}
+
+\publication
+    {10.1149/MA2021-02361036mtgabs}
+    {240$^{\rm th}$ ECS Meeting, Orlando.}
+    {Fabusuyi Aroge, Bharathy S. Parimalam, Francesco Orfino, Monica Dutta, Erik Kjeang.}
+    {Method for Analyzing 2D X-Ray Transmission Images for Operando Liquid Water Distribution in a Polymer Electrolyte Fuel Cell (2021).}
+
+\publication
+    {10.1149/MA2019-02/6/452}
+    {236$^{\rm th}$ ECS Meeting, Atlanta.}
+    {Bharathy S. Parimalam, Yubai Li, Paul Choi, Shawn Litster.}
+    {Lithium Plating Patterns on Lithium Anode Revealed with Operando Nanoscale X-Ray Imaging (2019).}
+
+\publication
+    {10.1149/MA2018-01/3/555}
+    {233$^{\rm rd}$ ECS Meeting, Seattle.}
+    {Brett L. Lucht, KWD Kaveendi Chandrasiri, Sunhyung Jurng, Bharathy S. Parimalam, Cao Cuong Nguyen, Benjamin Young, David Heskett.}
+    {Surface Functionalization of Silicon Nanoparticles with Citric Acid for Enhanced Performance As Lithium Ion Battery Anodes (2018).}
+
+\publication
+    {}
+    {250$^{\rm th}$ ACS national meeting, Boston.}
+    {Bharathy S. Parimalam,  Mengyun Nie, Brett L. Lucht.}
+    {Comparison of the Reduction Products: Vinylene Carbonate vs. Fluoroethylene Carbonate (2015).}
+
+\publication
+    {10.1149/MA2013-02/14/1138}
+    {224$^{\rm th}$ ECS Meeting, San Francisco.}
+    {Brett L Lucht, Dinesh Chalasani, Bharathy S. Parimalam, Daniel M Seo, Rahul Kadam, Mengqing Xu.}
+    {Lithium Alkyl Carbonates: Preparation and Investigation of Stability (2013).}
+
+\section*{Posters}
+
+\publication
+    {}
+    {256$^{\rm th}$ ACS national meeting, Boston.}
+    {Kaveendi Chandrasiri, Sunhyung Jurng, Bharathy S. Parimalam, Cao Cuong Nguyen, Benjamin Young, Brett Lucht, David Heskett.}
+    {Use of citric acid to form an artificial SEI on silicon nanoparticles to enhance the performance of lithium-ion battery anodes (2018).}
+
+\publication
+    {10.1149/MA2018-01/3/555}
+    {233$^{\rm rd}$ ECS Meeting, Seattle.}
+    {Brett L Lucht, Dilni Kaveendi Chandrasiri, Sunhyung Jurng, Bharathy S. Parimalam, Cao Cuong Nguyen, Benjamin Young and David Heskett.}
+    {Surface Functionalization of Silicon Nanoparticles with Citric Acid for Enhanced Performance As Lithium Ion Battery Anodes(2018).}
+
+\publication
+    {}
+    {68$^{\rm th}$ Meeting of International Society of Electrochemistry, Providence.}
+    {Bharathy S. Parimalam, and Brett L Lucht.}
+    {Insights into the Stability of Lithium-Ion Battery SEI Components in LiPF6 Containing Electrolytes (2017).}
+
+\publication
+    {10.1149/MA2016-03/2/714}
+    {18$^{\rm th}$ International Meeting on Lithium Batteries, Chicago.}
+    {Bharathy S. Parimalam, Mengyun Nie, Brett L Lucht.}
+    {Reduction Products of Vinylene Carbonate and Fluoroethylene Carbonate (2016).}
+
+\publication
+    {}
+    {International Symposium on Energy Materials. Kolkata.}
+    {Bharathy S. Parimalam, Chinnathambi S., SriDeviKumari T., PremKumar T.}
+    {Nanoscale Bismuth-Copper Composite as a Lithium Insertion Anode Material (2011).}
+
+\section*{Skills}
+
+\skill{Evaluating the significance of various factors in an experiment using design of experiment (DOE) software, such as Design Expert.}
+
+\skill{Electrode fabrication, cell building and electrochemical testing of lithium-ion batteries}
+
+\skill{Multiscale \textit{operando/in situ} imaging of electrochemical cells and components using micro and nano X-ray computed tomography}
+
+\skill{X-ray Photoelectron Spectroscopic analysis of electrically insulating air-sensitive powder samples}
+
+\skill{Fourier Transform Infrared Spectroscopic analysis of air-sensitive powder samples and electrodes}
+
+\skill{Gas Chromatography-Mass Spectrometric analysis of liquids and gases}
+
+\skill{Nuclear Magnetic Resonance Spectroscopic analysis of water/air-sensitive samples} 
+
+\skill{\textit{Operando/in situ} nano and micro XCT imaging of electrochemical cells, electrodes, and membranes} 
+
+\skill{Processing and segmentation of microscopy images using traditional and machine-learning methods (python/pandas, tensorflow, scikit-image; ImageJ)}
+
+\skill{Computing pore/crack/particle size distributions, phase fractions, and other properties from 2D/3D images using python (porespy, scikit-image).}
+
+\skill{Numerical simulation of battery cycling and aging behavior using python (pandas, numpy, scipy).}
+
+\skill{Documenting python modules using document generator, Sphinx.}
+
+\skill{Familiar with Jupyter Lab/Notebook.}
+
+\skill{Computer-aided design using and fabrication of custom XCT fixtures for operando and in-situ analysis}
+
+\skill{Design and fabrication of custom electrochemical cells and samples with high X-ray transparency for \textit{operando/in situ} imaging}
+
+\skill{Technical communication in the forms of presentations, reports, white papers, and publications}
+
+\skill{Mentored graduate and undergraduate researchers with varying levels of expertise.}
+
+\skill{Collaborated both within and outside the team on several research projects}
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

@@ -1,0 +1,81 @@
+\RequireVersions{
+  *{application}{luaTeX}  {0000/00/00 v1.16.1}
+  *{format} {LaTeX2e}     {2022-11-01 v2.e}
+  *{package}{snapshot}    {2020/06/17 v2.14}
+  *{class}  {article}     {2022/07/02 v1.4n}
+  *{file}   {size11.clo}  {2022/07/02 v1.4n}
+  *{package}{amssymb}     {2013/01/14 v3.01}
+  *{package}{amsfonts}    {2013/01/14 v3.01}
+  *{package}{fontspec}    {2022/01/15 v2.8a}
+  *{package}{xparse}      {2023-02-02 v3}
+  *{package}{expl3}       {2023-03-30 v3}
+  *{file}   {l3backend-luatex.def}{2023-03-30 v3}
+  *{package}{fontspec-luatex}{2022/01/15 v2.8a}
+  *{package}{fontenc}     {0000/00/00 v0.0}
+  *{file}   {fontspec.cfg}{0000/00/00 v0.0}
+  *{package}{graphicx}    {2021/09/16 v1.2d}
+  *{package}{keyval}      {2022/05/29 v1.15}
+  *{package}{graphics}    {2022/03/10 v1.4e}
+  *{package}{trig}        {2021/08/11 v1.11}
+  *{file}   {graphics.cfg}{2016/06/04 v1.11}
+  *{file}   {luatex.def}  {2022/09/22 v1.2d}
+  *{package}{hyperref}    {2023-02-07 v7.00v}
+  *{package}{ltxcmds}     {2020-05-10 v1.25}
+  *{package}{iftex}       {2022/02/03 v1.0f}
+  *{package}{pdftexcmds}  {2020-06-27 v0.33}
+  *{package}{infwarerr}   {2019/12/03 v1.5}
+  *{package}{kvsetkeys}   {2022-10-05 v1.19}
+  *{package}{kvdefinekeys}{2019-12-19 v1.6}
+  *{package}{pdfescape}   {2019/12/09 v1.15}
+  *{package}{hycolor}     {2020-01-27 v1.10}
+  *{package}{letltxmacro} {2019/12/03 v1.6}
+  *{package}{auxhook}     {2019-12-17 v1.6}
+  *{package}{nameref}     {2022-05-17 v2.50}
+  *{package}{refcount}    {2019/12/15 v3.6}
+  *{package}{gettitlestring}{2019/12/15 v1.6}
+  *{package}{kvoptions}   {2022-06-15 v3.15}
+  *{file}   {pd1enc.def}  {2023-02-07 v7.00v}
+  *{package}{intcalc}     {2019/12/15 v1.3}
+  *{package}{etexcmds}    {2019/12/15 v1.7}
+  *{file}   {puenc.def}   {2023-02-07 v7.00v}
+  *{package}{url}         {2013/09/16 v3.4}
+  *{package}{bitset}      {2019/12/09 v1.3}
+  *{package}{bigintcalc}  {2019/12/15 v1.5}
+  *{package}{atbegshi-ltx}{2021/01/10 v1.0c}
+  *{file}   {hluatex.def} {2023-02-07 v7.00v}
+  *{package}{stringenc}   {2019/11/29 v1.12}
+  *{package}{atveryend-ltx}{2020/08/19 v1.0a}
+  *{package}{rerunfilecheck}{2022-07-10 v1.10}
+  *{package}{uniquecounter}{2019/12/15 v1.4}
+  *{package}{lmodern}     {2015/05/01 v1.6.1}
+  *{package}{indentfirst} {1995/11/23 v1.03}
+  *{package}{setspace}    {2022/12/04 v6.7b}
+  *{package}{titlesec}    {2021/07/05 v2.14}
+  *{package}{xifthen}     {2015/11/05 v1.4.0}
+  *{package}{calc}        {2017/05/25 v4.3}
+  *{package}{ifthen}      {2022/04/13 v1.1d}
+  *{package}{ifmtarg}     {2018/04/16 v1.2b}
+  *{package}{xstring}     {2023/01/14 v1.85}
+  *{package}{fontenc}     {0000/00/00 v0.0}
+  *{file}   {t1lmr.fd}    {2015/05/01 v1.6.1}
+  *{package}{geometry}    {2020/01/02 v5.9}
+  *{package}{ifvtex}      {2019/10/25 v1.7}
+  *{file}   {geometry.cfg}{0000/00/00 v0.0}
+  *{file}   {ts1cmr.fd}   {2022/07/10 v2.5l}
+  *{file}   {ot1lmr.fd}   {2015/05/01 v1.6.1}
+  *{file}   {omllmm.fd}   {2015/05/01 v1.6.1}
+  *{file}   {omslmsy.fd}  {2015/05/01 v1.6.1}
+  *{file}   {omxlmex.fd}  {2015/05/01 v1.6.1}
+  *{file}   {umsa.fd}     {2013/01/14 v3.01}
+  *{file}   {umsb.fd}     {2013/01/14 v3.01}
+  *{-------}{Document-specific files:}{----}
+  *{file}   {supp-pdf.mkii}{0000/00/00 v0.0}
+  *{package}{epstopdf-base}{2020-01-24 v2.11}
+  *{file}   {epstopdf-sys.cfg}{2021/03/18 v2.0}
+  *{package}{color}       {2022/01/06 v1.3d}
+  *{file}   {color.cfg}   {2016/01/02 v1.6}
+  *{file}   {mathcolor.ltx}{0000/00/00 v0.0}
+  *{file}   {main.out}    {0000/00/00 v0.0}
+  *{file}   {main.out}    {0000/00/00 v0.0}
+  *{file}   {signature.png}{Graphic v0.0}
+}
