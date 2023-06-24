@@ -1,6 +1,6 @@
+.vscode/
 **/desktop.ini
 *.txt
 *.log
 *.aux
 *.out
-settings.json
