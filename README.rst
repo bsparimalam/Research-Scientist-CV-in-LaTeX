@@ -1,8 +1,8 @@
 
-Research Scientist CV and CV Page 1 in LaTeX
+Research Scientist CV and Cover Letter in LaTeX
 ################################################
 
-This is a simple CV Page 1 and CV LaTeX template for research scientists.
+This is a simple cover letter and CV LaTeX template for research scientists.
 
 +-------------------+---------------------------------------------------+
 |   File            |   Description                                     |
@@ -13,7 +13,7 @@ This is a simple CV Page 1 and CV LaTeX template for research scientists.
 +-------------------+---------------------------------------------------+
 |   signature.png   |   signature file                                  |
 +-------------------+---------------------------------------------------+
-|   main.pdf        |   output file, CV Page 1 and the resume        |
+|   main.pdf        |   output file, cover letter and the resume        |
 +-------------------+---------------------------------------------------+
 
 
@@ -27,8 +27,8 @@ Instructions
 - Build using the LuaLaTeX option
 - Done!
 
-Output Preview
-**************
+Preview
+********
 
 .. image:: preview/main-0.png
     :alt: Cover Letter
@@ -63,5 +63,3 @@ Output Preview
 .. image:: preview/main-5.png
     :alt: CV Page 5
     :align: center
-
-------------------------------------------------------------------------------------------
